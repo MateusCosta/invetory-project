@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <script>
+        // Redireciona para a aplicação principal com hash routing
+        const currentPath = window.location.pathname;
+        const baseUrl = '/invetory-project/';
+        
+        // Remove a barra inicial se existir
+        const cleanPath = currentPath.startsWith('/') ? currentPath.substring(1) : currentPath;
+        
+        // Se a URL contém rotas da aplicação, redireciona com hash
+        if (cleanPath.includes('admin') || cleanPath.includes('inventory') || 
+            cleanPath.includes('stock-movement') || cleanPath.includes('transactions')) {
+            window.location.replace(baseUrl + '#' + '/' + cleanPath);
+        } else {
+            // Caso contrário, redireciona para a página principal
+            window.location.replace(baseUrl);
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
+        <h2>Redirecionando...</h2>
+        <p>Se você não for redirecionado automaticamente, <a href="/invetory-project/">clique aqui</a>.</p>
+    </div>
+</body>
+</html>
