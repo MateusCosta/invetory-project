@@ -1,40 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecionando para Sistema de Inventário</title>
-  <script>
-    // Redireciona para a aplicação principal com hash routing
-    const currentPath = window.location.pathname;
-    const baseUrl = '/invetory-project/';
-    
-    // Se a URL contém rotas específicas, redireciona com hash
-    if (currentPath.includes('/login')) {
-      window.location.replace(baseUrl + '#/login');
-    } else if (currentPath.includes('/admin/users')) {
-      window.location.replace(baseUrl + '#/admin/users');
-    } else if (currentPath.includes('/admin/branches')) {
-      window.location.replace(baseUrl + '#/admin/branches');
-    } else if (currentPath.includes('/inventory')) {
-      window.location.replace(baseUrl + '#/inventory');
-    } else if (currentPath.includes('/stock-movement')) {
-      window.location.replace(baseUrl + '#/stock-movement');
-    } else if (currentPath.includes('/transactions')) {
-      window.location.replace(baseUrl + '#/transactions');
-    } else {
-      // Para outras rotas, redireciona para a página principal
-      window.location.replace(baseUrl);
-    }
-  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/invetory-project/inventory.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Sistema de Gerenciamento de Inventário" />
+  <meta name="theme-color" content="#0d6efd" />
+  <title>Sistema de Inventário</title>
+  <script type="module" crossorigin src="/invetory-project/assets/index-PhSes80o.js"></script>
+  <link rel="stylesheet" crossorigin href="/invetory-project/assets/index-CHMc8at0.css">
 </head>
 
 <body>
-  <div style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
-    <h2>Redirecionando para o Sistema de Inventário...</h2>
-    <p>Se você não for redirecionado automaticamente, <a href="/invetory-project/">clique aqui</a>.</p>
-  </div>
+  <div id="root"></div>
 </body>
 
 </html>
